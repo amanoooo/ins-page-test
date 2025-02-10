@@ -5,15 +5,20 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <div style="position: fixed">
+      <div style="display: flex; justify-content: center; align-items: center">
+        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="20" height="20" />
+        <span>Instagram</span>
+      </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <div class="wrapper">
+        <nav style="display: flex; flex-direction: column; flex: 1">
+          <RouterLink to="/">首页</RouterLink>
+          <RouterLink to="/">搜索</RouterLink>
+          <RouterLink to="/">发现</RouterLink>
+          <RouterLink to="/">消息</RouterLink>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -24,11 +29,17 @@ import HelloWorld from './components/HelloWorld.vue'
 header {
   line-height: 1.5;
   max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  width: 15rem;
+  padding: 1rem;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  /* margin: 0 auto 2rem; */
 }
 
 nav {
@@ -64,7 +75,7 @@ nav a:first-of-type {
   }
 
   .logo {
-    margin: 0 2rem 0 0;
+    /* margin: 0 2rem 0 0; */
   }
 
   header .wrapper {
